@@ -38,8 +38,7 @@
     $('#slider-timestamp').html(options.markers[ui.value].feature.properties.time.substr(0, 2023));
     sliderControl = L.control.sliderControl({position: "topright", layer: testlayer, follow: 3});
 
-
-    //Make sure to add the slider to the map ;-)
+    //Make sure to add the slider to the map 
     map.addControl(sliderControl);
 
     //And initialize the slider
