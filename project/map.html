@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <!-- jQueryUI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #map { height: 900px; width: 1800px}
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQueryUI JS -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- SliderControl JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-slider/0.4.1/L.Control.SliderControl.min.js"></script>
+
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        //Create a marker layer (in the example done via a GeoJSON)
+    //var testlayer = L.geoJson(json);
+    $('#slider-timestamp').html(options.markers[ui.value].feature.properties.time.substr(0, 2023));
+    sliderControl = L.control.sliderControl({position: "topright", layer: testlayer, follow: 3});
+
+
+    //Make sure to add the slider to the map ;-)
+    map.addControl(sliderControl);
+
+    //And initialize the slider
+    sliderControl.startSlider();
+        var marker = L.marker([51.5, -0.09]).addTo(map);
+
+        
+    </script>
+</body>
+</html>
