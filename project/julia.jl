@@ -14,8 +14,15 @@ client = Mongoc.Client("localhost", 27017)
 #Database is named QLAB, Collection is named Cities, documents are named cities 
 database = Mongoc.Database(client, "QLAB")
 collection = Mongoc.Collection(database, "Cities")
+target_collection_1 = Mongoc.Collection(database, "Cities_Opt_1")
+constraints = Mongoc.Collection(database, "Constraints")
 
 function create_trade_dict(doc)
+     # Check if "Trade" key exists in the document
+    if !haskey(doc, "Trade")
+        error("Trade key not found in document: $(doc["Name"])")
+    end
+
     #Initialising dicts
     imports = Dict{String, Vector{Float64}}(
         "Animals & Animal Products" => Float64[],
@@ -77,17 +84,14 @@ function create_trade_dict(doc)
 
 end
 
-#Iterate over each document in the collection
-#for doc in Mongoc.find(collection)
-#Call the function to get imports and exports vectors
-#imports, exports = create_trade_dict(doc)
-#end
+function add_constraints(model, constraints_collection)
+    for constraint in constraints
+        constraint_expr = constraint["expression"]     
+        parse_constraint_head(constraint)   
+    end
+end
 
-Abuja_trade_imports, Abuja_trade_exports = create_trade_dict(Mongoc.find_one(collection, Mongoc.BSON("""{ "Name" : "Abuja" }""")))
-println(Abuja_trade_imports)
-println(Abuja_trade_exports)
-
-function optimise_dict(imports::Dict{String, Vector{Float64}}, exports::Dict{String, Vector{Float64}})
+function quad_opt(imports::Dict{String, Vector{Float64}}, exports::Dict{String, Vector{Float64}})
     # Ensure the inputs are dictionaries of equal length
     if keys(imports) != keys(exports)
         throw(ArgumentError("The categories in imports and exports must be the same"))
@@ -115,39 +119,48 @@ function optimise_dict(imports::Dict{String, Vector{Float64}}, exports::Dict{Str
         @variable(model, adjusted_imports[1:n] >= 0)
         @variable(model, adjusted_exports[1:n] >= 0)
         
-        #Objective needs checked
-        @objective(model, Min, sum((adjusted_imports[i] - category_imports[i])^2 + (adjusted_exports[i] - category_exports[i])^2 for i in 1:n))
-        
-        #Constraint to make sure total imports equal total exports
-        @constraint(model, sum(adjusted_imports) == sum(adjusted_exports))
-        
-        #Average of every 10 imports should be higher than the last 10 imports
-        for i in 11:n
-            @constraint(model, sum(adjusted_imports[i-9:i]) / 10 >= sum(adjusted_imports[i-10:i-1]) / 10)
-        end
-        
-        #Constraint to make sure imports total exports after optimisation
-        for i in 1:n
-            @constraint(model, adjusted_exports[i] == adjusted_imports[i])
-        end
+        #Now constraints included as weights 
+        #When calling and parsing from a database, discuss how to add weighting - automatically? Couldn't find a viable way so far
+
+        @objective(model, Min, 
+        sum((adjusted_imports[i] - category_imports[i])^2 + (adjusted_exports[i] - category_exports[i])^2 for i in 1:n) +
+        w1 * (sum(adjusted_imports) - sum(adjusted_exports))^2 +
+        w2 * sum(max(0, sum(adjusted_imports[i-10:i-1]) - sum(adjusted_imports[i-9:i])) for i in 11:n) +
+        w3 * sum((adjusted_exports[i] - adjusted_imports[i])^2 for i in 1:n)
+    )
         
         optimize!(model)
         
-        # Retrieve the optimal values
-        opt_imports[category] = value.(adjusted_imports)
-        opt_exports[category] = value.(adjusted_exports)
+        # Round and retrieve optimized values
+        opt_imports[category] = round.(value.(adjusted_imports), digits=2)
+        opt_exports[category] = round.(value.(adjusted_exports), digits=2)
     end
     
     return opt_imports, opt_exports
 end
 
-opt_imports, opt_exports = optimise_dict(Abuja_trade_imports, Abuja_trade_exports)
+#Runs the quadratic optimiser on database and inserts it into Cities_Opt_1
 
-for category in keys(opt_imports)
-    println("Optimized Imports for $category: ", opt_imports[category])
-    println("Optimized Exports for $category: ", opt_exports[category])
-end
+#for doc in collection
+#    city_name = doc["Name"]
+#
+#    # Check if document already exists in the target collection
+#    existing_doc = Mongoc.find_one(target_collection_1, Dict("Name" => city_name))
+#    if !isnothing(existing_doc)
+#        println("Document for city $city_name already exists in the target collection. Skipping.")
+#        continue
+#    end
+#
+#    imports, exports = create_trade_dict(doc)
+#    #Prevents Scope Warning
+#    local_opt_imports, local_opt_exports = quad_opt(imports, exports)
+#
+#    new_doc = Dict("Name" => city_name, "Optimized_Trade" => Dict("Imports" => opt_imports, "Exports" => opt_exports))
+    
+    # Needs to be converted into BSON format to be compatible with the method
+#    Mongoc.insert_one(target_collection_1, Mongoc.BSON(new_doc))
+#end
 
-
+print("Success")
 
 
