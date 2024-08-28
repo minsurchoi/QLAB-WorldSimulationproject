@@ -1,10 +1,18 @@
 {
-    "Name": "Nairobi",
+    "Name": "Anyang",
 "population": {
-        
-"2009": "3,138,369 ",
-"2010": "3,240,155 ",
-"2016":"5,545,000 ",
+    
+    
+        "2020": " 5,176,000
+
+
+     ",
+"2018": "5,173,188
+",
+"2010": "5,161,106
+",
+"2000": "5,477,614
+",
 {
     "1900": {
         "Imports": {
@@ -53,7 +61,7 @@
             "Miscellaneous Manufactured Articles": 34,
             "Works of Art, Collectors' Pieces and Antiques": 7
         },
-        "Population": 164300
+        "Population": 205376
     },
     "1901": {
         "Imports": {
@@ -102,7 +110,7 @@
             "Miscellaneous Manufactured Articles": 35,
             "Works of Art, Collectors' Pieces and Antiques": 7
         },
-        "Population": 169229
+        "Population": 211537
     },
     "1902": {
         "Imports": {
@@ -151,7 +159,7 @@
             "Miscellaneous Manufactured Articles": 37,
             "Works of Art, Collectors' Pieces and Antiques": 7
         },
-        "Population": 174306
+        "Population": 217883
     },
     "1903": {
         "Imports": {
@@ -200,7 +208,7 @@
             "Miscellaneous Manufactured Articles": 38,
             "Works of Art, Collectors' Pieces and Antiques": 8
         },
-        "Population": 179535
+        "Population": 224419
     },
     "1904": {
         "Imports": {
@@ -249,7 +257,7 @@
             "Miscellaneous Manufactured Articles": 39,
             "Works of Art, Collectors' Pieces and Antiques": 8
         },
-        "Population": 184922
+        "Population": 231152
     },
     "1905": {
         "Imports": {
@@ -298,7 +306,7 @@
             "Miscellaneous Manufactured Articles": 40,
             "Works of Art, Collectors' Pieces and Antiques": 8
         },
-        "Population": 190469
+        "Population": 238087
     },
     "1906": {
         "Imports": {
@@ -347,7 +355,7 @@
             "Miscellaneous Manufactured Articles": 41,
             "Works of Art, Collectors' Pieces and Antiques": 8
         },
-        "Population": 196183
+        "Population": 245229
     },
     "1907": {
         "Imports": {
@@ -396,7 +404,7 @@
             "Miscellaneous Manufactured Articles": 42,
             "Works of Art, Collectors' Pieces and Antiques": 9
         },
-        "Population": 202069
+        "Population": 252586
     },
     "1908": {
         "Imports": {
@@ -445,7 +453,7 @@
             "Miscellaneous Manufactured Articles": 44,
             "Works of Art, Collectors' Pieces and Antiques": 9
         },
-        "Population": 208131
+        "Population": 260164
     },
     "1909": {
         "Imports": {
@@ -494,7 +502,7 @@
             "Miscellaneous Manufactured Articles": 45,
             "Works of Art, Collectors' Pieces and Antiques": 9
         },
-        "Population": 214375
+        "Population": 267969
     },
     "1910": {
         "Imports": {
@@ -543,7 +551,7 @@
             "Miscellaneous Manufactured Articles": 46,
             "Works of Art, Collectors' Pieces and Antiques": 9
         },
-        "Population": 220806
+        "Population": 276008
     },
     "1911": {
         "Imports": {
@@ -592,7 +600,7 @@
             "Miscellaneous Manufactured Articles": 48,
             "Works of Art, Collectors' Pieces and Antiques": 10
         },
-        "Population": 227430
+        "Population": 284288
     },
     "1912": {
         "Imports": {
@@ -641,7 +649,7 @@
             "Miscellaneous Manufactured Articles": 49,
             "Works of Art, Collectors' Pieces and Antiques": 10
         },
-        "Population": 234253
+        "Population": 292817
     },
     "1913": {
         "Imports": {
@@ -690,7 +698,7 @@
             "Miscellaneous Manufactured Articles": 51,
             "Works of Art, Collectors' Pieces and Antiques": 10
         },
-        "Population": 241281
+        "Population": 301601
     },
     "1914": {
         "Imports": {
@@ -739,7 +747,7 @@
             "Miscellaneous Manufactured Articles": 52,
             "Works of Art, Collectors' Pieces and Antiques": 11
         },
-        "Population": 248519
+        "Population": 310649
     },
     "1915": {
         "Imports": {
@@ -788,7 +796,7 @@
             "Miscellaneous Manufactured Articles": 54,
             "Works of Art, Collectors' Pieces and Antiques": 11
         },
-        "Population": 255975
+        "Population": 319969
     },
     "1916": {
         "Imports": {
@@ -837,7 +845,7 @@
             "Miscellaneous Manufactured Articles": 56,
             "Works of Art, Collectors' Pieces and Antiques": 11
         },
-        "Population": 263654
+        "Population": 329568
     },
     "1917": {
         "Imports": {
@@ -886,7 +894,7 @@
             "Miscellaneous Manufactured Articles": 57,
             "Works of Art, Collectors' Pieces and Antiques": 12
         },
-        "Population": 271564
+        "Population": 339455
     },
     "1918": {
         "Imports": {
@@ -935,7 +943,7 @@
             "Miscellaneous Manufactured Articles": 59,
             "Works of Art, Collectors' Pieces and Antiques": 12
         },
-        "Population": 279711
+        "Population": 349638
     },
     "1919": {
         "Imports": {
@@ -984,7 +992,7 @@
             "Miscellaneous Manufactured Articles": 61,
             "Works of Art, Collectors' Pieces and Antiques": 12
         },
-        "Population": 288102
+        "Population": 360128
     },
     "1920": {
         "Imports": {
@@ -1033,7 +1041,7 @@
             "Miscellaneous Manufactured Articles": 63,
             "Works of Art, Collectors' Pieces and Antiques": 13
         },
-        "Population": 296745
+        "Population": 370931
     },
     "1921": {
         "Imports": {
@@ -1082,7 +1090,7 @@
             "Miscellaneous Manufactured Articles": 64,
             "Works of Art, Collectors' Pieces and Antiques": 13
         },
-        "Population": 305647
+        "Population": 382059
     },
     "1922": {
         "Imports": {
@@ -1131,7 +1139,7 @@
             "Miscellaneous Manufactured Articles": 66,
             "Works of Art, Collectors' Pieces and Antiques": 14
         },
-        "Population": 314817
+        "Population": 393521
     },
     "1923": {
         "Imports": {
@@ -1180,7 +1188,7 @@
             "Miscellaneous Manufactured Articles": 68,
             "Works of Art, Collectors' Pieces and Antiques": 14
         },
-        "Population": 324261
+        "Population": 405327
     },
     "1924": {
         "Imports": {
@@ -1229,7 +1237,7 @@
             "Miscellaneous Manufactured Articles": 70,
             "Works of Art, Collectors' Pieces and Antiques": 15
         },
-        "Population": 333989
+        "Population": 417487
     },
     "1925": {
         "Imports": {
@@ -1278,7 +1286,7 @@
             "Miscellaneous Manufactured Articles": 73,
             "Works of Art, Collectors' Pieces and Antiques": 15
         },
-        "Population": 344009
+        "Population": 430011
     },
     "1926": {
         "Imports": {
@@ -1327,7 +1335,7 @@
             "Miscellaneous Manufactured Articles": 75,
             "Works of Art, Collectors' Pieces and Antiques": 15
         },
-        "Population": 354329
+        "Population": 442912
     },
     "1927": {
         "Imports": {
@@ -1376,7 +1384,7 @@
             "Miscellaneous Manufactured Articles": 77,
             "Works of Art, Collectors' Pieces and Antiques": 16
         },
-        "Population": 364959
+        "Population": 456199
     },
     "1928": {
         "Imports": {
@@ -1425,7 +1433,7 @@
             "Miscellaneous Manufactured Articles": 79,
             "Works of Art, Collectors' Pieces and Antiques": 16
         },
-        "Population": 375908
+        "Population": 469885
     },
     "1929": {
         "Imports": {
@@ -1474,7 +1482,7 @@
             "Miscellaneous Manufactured Articles": 82,
             "Works of Art, Collectors' Pieces and Antiques": 17
         },
-        "Population": 387185
+        "Population": 483982
     },
     "1930": {
         "Imports": {
@@ -1523,7 +1531,7 @@
             "Miscellaneous Manufactured Articles": 84,
             "Works of Art, Collectors' Pieces and Antiques": 17
         },
-        "Population": 398801
+        "Population": 498501
     },
     "1931": {
         "Imports": {
@@ -1572,7 +1580,7 @@
             "Miscellaneous Manufactured Articles": 87,
             "Works of Art, Collectors' Pieces and Antiques": 18
         },
-        "Population": 410765
+        "Population": 513456
     },
     "1932": {
         "Imports": {
@@ -1621,7 +1629,7 @@
             "Miscellaneous Manufactured Articles": 89,
             "Works of Art, Collectors' Pieces and Antiques": 19
         },
-        "Population": 423088
+        "Population": 528860
     },
     "1933": {
         "Imports": {
@@ -1670,7 +1678,7 @@
             "Miscellaneous Manufactured Articles": 92,
             "Works of Art, Collectors' Pieces and Antiques": 19
         },
-        "Population": 435780
+        "Population": 544726
     },
     "1934": {
         "Imports": {
@@ -1719,7 +1727,7 @@
             "Miscellaneous Manufactured Articles": 95,
             "Works of Art, Collectors' Pieces and Antiques": 20
         },
-        "Population": 448854
+        "Population": 561067
     },
     "1935": {
         "Imports": {
@@ -1768,7 +1776,7 @@
             "Miscellaneous Manufactured Articles": 98,
             "Works of Art, Collectors' Pieces and Antiques": 20
         },
-        "Population": 462319
+        "Population": 577899
     },
     "1936": {
         "Imports": {
@@ -1817,7 +1825,7 @@
             "Miscellaneous Manufactured Articles": 101,
             "Works of Art, Collectors' Pieces and Antiques": 21
         },
-        "Population": 476189
+        "Population": 595236
     },
     "1937": {
         "Imports": {
@@ -1866,7 +1874,7 @@
             "Miscellaneous Manufactured Articles": 104,
             "Works of Art, Collectors' Pieces and Antiques": 22
         },
-        "Population": 490475
+        "Population": 613093
     },
     "1938": {
         "Imports": {
@@ -1915,7 +1923,7 @@
             "Miscellaneous Manufactured Articles": 107,
             "Works of Art, Collectors' Pieces and Antiques": 22
         },
-        "Population": 505189
+        "Population": 631486
     },
     "1939": {
         "Imports": {
@@ -1964,7 +1972,7 @@
             "Miscellaneous Manufactured Articles": 110,
             "Works of Art, Collectors' Pieces and Antiques": 23
         },
-        "Population": 520345
+        "Population": 650431
     },
     "1940": {
         "Imports": {
@@ -2013,7 +2021,7 @@
             "Miscellaneous Manufactured Articles": 113,
             "Works of Art, Collectors' Pieces and Antiques": 24
         },
-        "Population": 535955
+        "Population": 669944
     },
     "1941": {
         "Imports": {
@@ -2062,7 +2070,7 @@
             "Miscellaneous Manufactured Articles": 117,
             "Works of Art, Collectors' Pieces and Antiques": 24
         },
-        "Population": 552034
+        "Population": 690042
     },
     "1942": {
         "Imports": {
@@ -2111,7 +2119,7 @@
             "Miscellaneous Manufactured Articles": 120,
             "Works of Art, Collectors' Pieces and Antiques": 25
         },
-        "Population": 568595
+        "Population": 710743
     },
     "1943": {
         "Imports": {
@@ -2160,7 +2168,7 @@
             "Miscellaneous Manufactured Articles": 124,
             "Works of Art, Collectors' Pieces and Antiques": 26
         },
-        "Population": 585653
+        "Population": 732066
     },
     "1944": {
         "Imports": {
@@ -2209,7 +2217,7 @@
             "Miscellaneous Manufactured Articles": 128,
             "Works of Art, Collectors' Pieces and Antiques": 27
         },
-        "Population": 603222
+        "Population": 754028
     },
     "1945": {
         "Imports": {
@@ -2258,7 +2266,7 @@
             "Miscellaneous Manufactured Articles": 132,
             "Works of Art, Collectors' Pieces and Antiques": 27
         },
-        "Population": 621319
+        "Population": 776649
     },
     "1946": {
         "Imports": {
@@ -2307,7 +2315,7 @@
             "Miscellaneous Manufactured Articles": 135,
             "Works of Art, Collectors' Pieces and Antiques": 28
         },
-        "Population": 639958
+        "Population": 799948
     },
     "1947": {
         "Imports": {
@@ -2356,7 +2364,7 @@
             "Miscellaneous Manufactured Articles": 140,
             "Works of Art, Collectors' Pieces and Antiques": 29
         },
-        "Population": 659157
+        "Population": 823947
     },
     "1948": {
         "Imports": {
@@ -2405,7 +2413,7 @@
             "Miscellaneous Manufactured Articles": 144,
             "Works of Art, Collectors' Pieces and Antiques": 30
         },
-        "Population": 678932
+        "Population": 848665
     },
     "1949": {
         "Imports": {
@@ -2454,7 +2462,7 @@
             "Miscellaneous Manufactured Articles": 148,
             "Works of Art, Collectors' Pieces and Antiques": 31
         },
-        "Population": 699300
+        "Population": 874125
     },
     "1950": {
         "Imports": {
@@ -2503,7 +2511,7 @@
             "Miscellaneous Manufactured Articles": 153,
             "Works of Art, Collectors' Pieces and Antiques": 32
         },
-        "Population": 720279
+        "Population": 900349
     },
     "1951": {
         "Imports": {
@@ -2552,7 +2560,7 @@
             "Miscellaneous Manufactured Articles": 157,
             "Works of Art, Collectors' Pieces and Antiques": 33
         },
-        "Population": 741887
+        "Population": 927359
     },
     "1952": {
         "Imports": {
@@ -2601,7 +2609,7 @@
             "Miscellaneous Manufactured Articles": 162,
             "Works of Art, Collectors' Pieces and Antiques": 34
         },
-        "Population": 764144
+        "Population": 955180
     },
     "1953": {
         "Imports": {
@@ -2650,7 +2658,7 @@
             "Miscellaneous Manufactured Articles": 167,
             "Works of Art, Collectors' Pieces and Antiques": 35
         },
-        "Population": 787068
+        "Population": 983835
     },
     "1954": {
         "Imports": {
@@ -2699,7 +2707,7 @@
             "Miscellaneous Manufactured Articles": 172,
             "Works of Art, Collectors' Pieces and Antiques": 36
         },
-        "Population": 810680
+        "Population": 1013350
     },
     "1955": {
         "Imports": {
@@ -2748,7 +2756,7 @@
             "Miscellaneous Manufactured Articles": 177,
             "Works of Art, Collectors' Pieces and Antiques": 37
         },
-        "Population": 835001
+        "Population": 1043751
     },
     "1956": {
         "Imports": {
@@ -2797,7 +2805,7 @@
             "Miscellaneous Manufactured Articles": 182,
             "Works of Art, Collectors' Pieces and Antiques": 38
         },
-        "Population": 860051
+        "Population": 1075064
     },
     "1957": {
         "Imports": {
@@ -2846,7 +2854,7 @@
             "Miscellaneous Manufactured Articles": 188,
             "Works of Art, Collectors' Pieces and Antiques": 39
         },
-        "Population": 885852
+        "Population": 1107315
     },
     "1958": {
         "Imports": {
@@ -2895,7 +2903,7 @@
             "Miscellaneous Manufactured Articles": 193,
             "Works of Art, Collectors' Pieces and Antiques": 41
         },
-        "Population": 912428
+        "Population": 1140535
     },
     "1959": {
         "Imports": {
@@ -2944,7 +2952,7 @@
             "Miscellaneous Manufactured Articles": 199,
             "Works of Art, Collectors' Pieces and Antiques": 42
         },
-        "Population": 939801
+        "Population": 1174751
     },
     "1960": {
         "Imports": {
@@ -2993,7 +3001,7 @@
             "Miscellaneous Manufactured Articles": 205,
             "Works of Art, Collectors' Pieces and Antiques": 43
         },
-        "Population": 967995
+        "Population": 1209994
     },
     "1961": {
         "Imports": {
@@ -3042,7 +3050,7 @@
             "Miscellaneous Manufactured Articles": 211,
             "Works of Art, Collectors' Pieces and Antiques": 44
         },
-        "Population": 997035
+        "Population": 1246293
     },
     "1962": {
         "Imports": {
@@ -3091,7 +3099,7 @@
             "Miscellaneous Manufactured Articles": 218,
             "Works of Art, Collectors' Pieces and Antiques": 46
         },
-        "Population": 1026946
+        "Population": 1283682
     },
     "1963": {
         "Imports": {
@@ -3140,7 +3148,7 @@
             "Miscellaneous Manufactured Articles": 224,
             "Works of Art, Collectors' Pieces and Antiques": 47
         },
-        "Population": 1057754
+        "Population": 1322193
     },
     "1964": {
         "Imports": {
@@ -3189,7 +3197,7 @@
             "Miscellaneous Manufactured Articles": 231,
             "Works of Art, Collectors' Pieces and Antiques": 49
         },
-        "Population": 1089487
+        "Population": 1361858
     },
     "1965": {
         "Imports": {
@@ -3238,7 +3246,7 @@
             "Miscellaneous Manufactured Articles": 238,
             "Works of Art, Collectors' Pieces and Antiques": 50
         },
-        "Population": 1122171
+        "Population": 1402714
     },
     "1966": {
         "Imports": {
@@ -3287,7 +3295,7 @@
             "Miscellaneous Manufactured Articles": 245,
             "Works of Art, Collectors' Pieces and Antiques": 52
         },
-        "Population": 1155836
+        "Population": 1444796
     },
     "1967": {
         "Imports": {
@@ -3336,7 +3344,7 @@
             "Miscellaneous Manufactured Articles": 252,
             "Works of Art, Collectors' Pieces and Antiques": 53
         },
-        "Population": 1190512
+        "Population": 1488140
     },
     "1968": {
         "Imports": {
@@ -3385,7 +3393,7 @@
             "Miscellaneous Manufactured Articles": 260,
             "Works of Art, Collectors' Pieces and Antiques": 55
         },
-        "Population": 1226227
+        "Population": 1532784
     },
     "1969": {
         "Imports": {
@@ -3434,7 +3442,7 @@
             "Miscellaneous Manufactured Articles": 268,
             "Works of Art, Collectors' Pieces and Antiques": 56
         },
-        "Population": 1263014
+        "Population": 1578767
     },
     "1970": {
         "Imports": {
@@ -3483,7 +3491,7 @@
             "Miscellaneous Manufactured Articles": 276,
             "Works of Art, Collectors' Pieces and Antiques": 58
         },
-        "Population": 1300904
+        "Population": 1626130
     },
     "1971": {
         "Imports": {
@@ -3532,7 +3540,7 @@
             "Miscellaneous Manufactured Articles": 284,
             "Works of Art, Collectors' Pieces and Antiques": 60
         },
-        "Population": 1339931
+        "Population": 1674914
     },
     "1972": {
         "Imports": {
@@ -3581,7 +3589,7 @@
             "Miscellaneous Manufactured Articles": 293,
             "Works of Art, Collectors' Pieces and Antiques": 62
         },
-        "Population": 1380129
+        "Population": 1725162
     },
     "1973": {
         "Imports": {
@@ -3630,7 +3638,7 @@
             "Miscellaneous Manufactured Articles": 302,
             "Works of Art, Collectors' Pieces and Antiques": 63
         },
-        "Population": 1421533
+        "Population": 1776916
     },
     "1974": {
         "Imports": {
@@ -3679,7 +3687,7 @@
             "Miscellaneous Manufactured Articles": 311,
             "Works of Art, Collectors' Pieces and Antiques": 65
         },
-        "Population": 1464179
+        "Population": 1830224
     },
     "1975": {
         "Imports": {
@@ -3728,7 +3736,7 @@
             "Miscellaneous Manufactured Articles": 320,
             "Works of Art, Collectors' Pieces and Antiques": 67
         },
-        "Population": 1508104
+        "Population": 1885131
     },
     "1976": {
         "Imports": {
@@ -3777,7 +3785,7 @@
             "Miscellaneous Manufactured Articles": 330,
             "Works of Art, Collectors' Pieces and Antiques": 69
         },
-        "Population": 1553348
+        "Population": 1941685
     },
     "1977": {
         "Imports": {
@@ -3826,7 +3834,7 @@
             "Miscellaneous Manufactured Articles": 339,
             "Works of Art, Collectors' Pieces and Antiques": 71
         },
-        "Population": 1599948
+        "Population": 1999935
     },
     "1978": {
         "Imports": {
@@ -3875,7 +3883,7 @@
             "Miscellaneous Manufactured Articles": 350,
             "Works of Art, Collectors' Pieces and Antiques": 74
         },
-        "Population": 1647947
+        "Population": 2059933
     },
     "1979": {
         "Imports": {
@@ -3924,7 +3932,7 @@
             "Miscellaneous Manufactured Articles": 360,
             "Works of Art, Collectors' Pieces and Antiques": 76
         },
-        "Population": 1697385
+        "Population": 2121731
     },
     "1980": {
         "Imports": {
@@ -3973,7 +3981,7 @@
             "Miscellaneous Manufactured Articles": 371,
             "Works of Art, Collectors' Pieces and Antiques": 78
         },
-        "Population": 1748307
+        "Population": 2185383
     },
     "1981": {
         "Imports": {
@@ -4022,7 +4030,7 @@
             "Miscellaneous Manufactured Articles": 382,
             "Works of Art, Collectors' Pieces and Antiques": 81
         },
-        "Population": 1800756
+        "Population": 2250945
     },
     "1982": {
         "Imports": {
@@ -4071,7 +4079,7 @@
             "Miscellaneous Manufactured Articles": 394,
             "Works of Art, Collectors' Pieces and Antiques": 83
         },
-        "Population": 1854778
+        "Population": 2318473
     },
     "1983": {
         "Imports": {
@@ -4120,7 +4128,7 @@
             "Miscellaneous Manufactured Articles": 405,
             "Works of Art, Collectors' Pieces and Antiques": 85
         },
-        "Population": 1910422
+        "Population": 2388027
     },
     "1984": {
         "Imports": {
@@ -4169,7 +4177,7 @@
             "Miscellaneous Manufactured Articles": 418,
             "Works of Art, Collectors' Pieces and Antiques": 88
         },
-        "Population": 1967734
+        "Population": 2459668
     },
     "1985": {
         "Imports": {
@@ -4218,7 +4226,7 @@
             "Miscellaneous Manufactured Articles": 430,
             "Works of Art, Collectors' Pieces and Antiques": 91
         },
-        "Population": 2026766
+        "Population": 2533458
     },
     "1986": {
         "Imports": {
@@ -4267,7 +4275,7 @@
             "Miscellaneous Manufactured Articles": 443,
             "Works of Art, Collectors' Pieces and Antiques": 93
         },
-        "Population": 2087570
+        "Population": 2609462
     },
     "1987": {
         "Imports": {
@@ -4316,7 +4324,7 @@
             "Miscellaneous Manufactured Articles": 456,
             "Works of Art, Collectors' Pieces and Antiques": 96
         },
-        "Population": 2150197
+        "Population": 2687746
     },
     "1988": {
         "Imports": {
@@ -4365,7 +4373,7 @@
             "Miscellaneous Manufactured Articles": 470,
             "Works of Art, Collectors' Pieces and Antiques": 99
         },
-        "Population": 2214703
+        "Population": 2768378
     },
     "1989": {
         "Imports": {
@@ -4414,7 +4422,7 @@
             "Miscellaneous Manufactured Articles": 484,
             "Works of Art, Collectors' Pieces and Antiques": 102
         },
-        "Population": 2281144
+        "Population": 2851430
     },
     "1990": {
         "Imports": {
@@ -4463,7 +4471,7 @@
             "Miscellaneous Manufactured Articles": 499,
             "Works of Art, Collectors' Pieces and Antiques": 105
         },
-        "Population": 2349578
+        "Population": 2936973
     },
     "1991": {
         "Imports": {
@@ -4512,7 +4520,7 @@
             "Miscellaneous Manufactured Articles": 514,
             "Works of Art, Collectors' Pieces and Antiques": 108
         },
-        "Population": 2420065
+        "Population": 3025082
     },
     "1992": {
         "Imports": {
@@ -4561,7 +4569,7 @@
             "Miscellaneous Manufactured Articles": 529,
             "Works of Art, Collectors' Pieces and Antiques": 112
         },
-        "Population": 2492667
+        "Population": 3115834
     },
     "1993": {
         "Imports": {
@@ -4610,7 +4618,7 @@
             "Miscellaneous Manufactured Articles": 545,
             "Works of Art, Collectors' Pieces and Antiques": 115
         },
-        "Population": 2567447
+        "Population": 3209309
     },
     "1994": {
         "Imports": {
@@ -4659,7 +4667,7 @@
             "Miscellaneous Manufactured Articles": 561,
             "Works of Art, Collectors' Pieces and Antiques": 119
         },
-        "Population": 2644471
+        "Population": 3305589
     },
     "1995": {
         "Imports": {
@@ -4708,7 +4716,7 @@
             "Miscellaneous Manufactured Articles": 578,
             "Works of Art, Collectors' Pieces and Antiques": 122
         },
-        "Population": 2723805
+        "Population": 3404756
     },
     "1996": {
         "Imports": {
@@ -4757,7 +4765,7 @@
             "Miscellaneous Manufactured Articles": 596,
             "Works of Art, Collectors' Pieces and Antiques": 126
         },
-        "Population": 2805519
+        "Population": 3506899
     },
     "1997": {
         "Imports": {
@@ -4806,7 +4814,7 @@
             "Miscellaneous Manufactured Articles": 614,
             "Works of Art, Collectors' Pieces and Antiques": 130
         },
-        "Population": 2889685
+        "Population": 3612106
     },
     "1998": {
         "Imports": {
@@ -4855,7 +4863,7 @@
             "Miscellaneous Manufactured Articles": 632,
             "Works of Art, Collectors' Pieces and Antiques": 133
         },
-        "Population": 2976375
+        "Population": 3720469
     },
     "1999": {
         "Imports": {
@@ -4904,7 +4912,7 @@
             "Miscellaneous Manufactured Articles": 651,
             "Works of Art, Collectors' Pieces and Antiques": 137
         },
-        "Population": 3065666
+        "Population": 3832083
     },
     "2000": {
         "Imports": {
@@ -4953,7 +4961,7 @@
             "Miscellaneous Manufactured Articles": 670,
             "Works of Art, Collectors' Pieces and Antiques": 142
         },
-        "Population": 3157636
+        "Population": 3947046
     },
     "2001": {
         "Imports": {
@@ -5002,7 +5010,7 @@
             "Miscellaneous Manufactured Articles": 691,
             "Works of Art, Collectors' Pieces and Antiques": 146
         },
-        "Population": 3252366
+        "Population": 4065457
     },
     "2002": {
         "Imports": {
@@ -5051,7 +5059,7 @@
             "Miscellaneous Manufactured Articles": 711,
             "Works of Art, Collectors' Pieces and Antiques": 150
         },
-        "Population": 3349937
+        "Population": 4187421
     },
     "2003": {
         "Imports": {
@@ -5100,7 +5108,7 @@
             "Miscellaneous Manufactured Articles": 733,
             "Works of Art, Collectors' Pieces and Antiques": 155
         },
-        "Population": 3450435
+        "Population": 4313043
     },
     "2004": {
         "Imports": {
@@ -5149,7 +5157,7 @@
             "Miscellaneous Manufactured Articles": 755,
             "Works of Art, Collectors' Pieces and Antiques": 159
         },
-        "Population": 3553948
+        "Population": 4442435
     },
     "2005": {
         "Imports": {
@@ -5198,7 +5206,7 @@
             "Miscellaneous Manufactured Articles": 777,
             "Works of Art, Collectors' Pieces and Antiques": 164
         },
-        "Population": 3660566
+        "Population": 4575708
     },
     "2006": {
         "Imports": {
@@ -5247,7 +5255,7 @@
             "Miscellaneous Manufactured Articles": 801,
             "Works of Art, Collectors' Pieces and Antiques": 169
         },
-        "Population": 3770383
+        "Population": 4712979
     },
     "2007": {
         "Imports": {
@@ -5296,7 +5304,7 @@
             "Miscellaneous Manufactured Articles": 825,
             "Works of Art, Collectors' Pieces and Antiques": 174
         },
-        "Population": 3883495
+        "Population": 4854368
     },
     "2008": {
         "Imports": {
@@ -5345,7 +5353,7 @@
             "Miscellaneous Manufactured Articles": 850,
             "Works of Art, Collectors' Pieces and Antiques": 180
         },
-        "Population": 4000000
+        "Population": 5000000
     },
     "2009": {
         "Imports": {
@@ -5394,7 +5402,7 @@
             "Miscellaneous Manufactured Articles": 875,
             "Works of Art, Collectors' Pieces and Antiques": 185
         },
-        "Population": 4120000
+        "Population": 5150000
     },
     "2010": {
         "Imports": {
@@ -5443,7 +5451,7 @@
             "Miscellaneous Manufactured Articles": 901,
             "Works of Art, Collectors' Pieces and Antiques": 190
         },
-        "Population": 4243600
+        "Population": 5304500
     },
     "2011": {
         "Imports": {
@@ -5492,7 +5500,7 @@
             "Miscellaneous Manufactured Articles": 928,
             "Works of Art, Collectors' Pieces and Antiques": 196
         },
-        "Population": 4370908
+        "Population": 5463635
     },
     "2012": {
         "Imports": {
@@ -5541,7 +5549,7 @@
             "Miscellaneous Manufactured Articles": 956,
             "Works of Art, Collectors' Pieces and Antiques": 202
         },
-        "Population": 4502035
+        "Population": 5627544
     },
     "2013": {
         "Imports": {
@@ -5590,7 +5598,7 @@
             "Miscellaneous Manufactured Articles": 985,
             "Works of Art, Collectors' Pieces and Antiques": 208
         },
-        "Population": 4637096
+        "Population": 5796370
     },
     "2014": {
         "Imports": {
@@ -5639,7 +5647,7 @@
             "Miscellaneous Manufactured Articles": 1014,
             "Works of Art, Collectors' Pieces and Antiques": 214
         },
-        "Population": 4776209
+        "Population": 5970261
     },
     "2015": {
         "Imports": {
@@ -5688,7 +5696,7 @@
             "Miscellaneous Manufactured Articles": 1045,
             "Works of Art, Collectors' Pieces and Antiques": 221
         },
-        "Population": 4919495
+        "Population": 6149369
     },
     "2016": {
         "Imports": {
@@ -5737,7 +5745,7 @@
             "Miscellaneous Manufactured Articles": 1076,
             "Works of Art, Collectors' Pieces and Antiques": 228
         },
-        "Population": 5067080
+        "Population": 6333850
     },
     "2017": {
         "Imports": {
@@ -5786,7 +5794,7 @@
             "Miscellaneous Manufactured Articles": 1109,
             "Works of Art, Collectors' Pieces and Antiques": 234
         },
-        "Population": 5219092
+        "Population": 6523865
     },
     "2018": {
         "Imports": {
@@ -5835,7 +5843,7 @@
             "Miscellaneous Manufactured Articles": 1142,
             "Works of Art, Collectors' Pieces and Antiques": 241
         },
-        "Population": 5375665
+        "Population": 6719581
     },
     "2019": {
         "Imports": {
@@ -5884,7 +5892,7 @@
             "Miscellaneous Manufactured Articles": 1176,
             "Works of Art, Collectors' Pieces and Antiques": 249
         },
-        "Population": 5536935
+        "Population": 6921169
     },
     "2020": {
         "Imports": {
@@ -5933,7 +5941,7 @@
             "Miscellaneous Manufactured Articles": 1211,
             "Works of Art, Collectors' Pieces and Antiques": 256
         },
-        "Population": 5703043
+        "Population": 7128804
     },
     "2021": {
         "Imports": {
@@ -5982,7 +5990,7 @@
             "Miscellaneous Manufactured Articles": 1248,
             "Works of Art, Collectors' Pieces and Antiques": 264
         },
-        "Population": 5874134
+        "Population": 7342668
     },
     "2022": {
         "Imports": {
@@ -6031,7 +6039,7 @@
             "Miscellaneous Manufactured Articles": 1285,
             "Works of Art, Collectors' Pieces and Antiques": 272
         },
-        "Population": 6050358
+        "Population": 7562948
     },
     "2023": {
         "Imports": {
@@ -6080,7 +6088,8 @@
             "Miscellaneous Manufactured Articles": 1324,
             "Works of Art, Collectors' Pieces and Antiques": 280
         },
-        "Population": 6231869
+        "Population": 7789837
     }
 }
 
+Click to add a cell.

@@ -79,14 +79,15 @@ if "Constraints" not in collist:
          """}
 
     constraint2 = {"Name" : "Trade Balance Constraint",
-         "Expression" : "sum(adjusted_imports) == sum(adjusted_exports)"}
+         "Expression" : "@constraint(sum(adjusted_imports) == sum(adjusted_exports))"}
 
     Constraints.insert_one(constraint1)
     Constraints.insert_one(constraint2)
 
     print("Success")
 
-
+if "GPT_constraints" not in collist:
+    GPT_constraints = db["GPT_constraints"]
 
 
 
