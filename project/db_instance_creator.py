@@ -43,29 +43,62 @@ def duplicate_and_randomize_collection(src_collection_name, dst_collection_name)
             randomize_trade(doc['Trade'])
         dst_collection.insert_one(doc)
 
-# Duplicate the Cities collection into Randomised_Cities with random values
-# Only needs to be run once
-# duplicate_and_randomize_collection('Cities', 'Randomised_Cities')
 
-if "Cities_Opt_1" not in collist:
-    #Create collection if not already existing
-    Cities_Opt_1 = db["Cities_Opt_1"]
+def create_error_term_table():
+    # Access the original and optimized collections
+    Opt_cities = db["Cities_Opt_1"]  # Optimized cities table
+    Org_cities = db["Cities"]  # Original cities table
+    
+    # Ensure the error terms table exists
+    if "Cities_Error_Terms" not in db.list_collection_names():
+        Cities_Error_Terms = db["Cities_Error_Terms"]
+    else:
+        Cities_Error_Terms = db["Cities_Error_Terms"]
+    
+    # Iterate through each city in the original table
+    for city in Org_cities.find():
+        # Get the city's name and trade data from the original table
+        city_name = city.get("Name")
+        original_trade_data = city.get("Trade", {})
+        
+        # Find the corresponding city in the optimized table
+        optimized_city = Opt_cities.find_one({"Name": city_name})
+        
+        if optimized_city:
+            optimized_trade_data = optimized_city.get("Trade", {})
+            error_term_data = {"Imports": {}, "Exports": {}}
+            
+            # Calculate error terms for Imports
+            for year, year_data in original_trade_data.items():
+                for category, values in year_data.get("Imports", {}).items():
+                    optimized_values = optimized_trade_data.get("Imports", {}).get(category, [])
+                    if category not in error_term_data["Imports"]:
+                        error_term_data["Imports"][category] = {}
+                    error_term_data["Imports"][category][year] = calculate_error_terms(values, optimized_values)
+            
+            # Calculate error terms for Exports
+            for year, year_data in original_trade_data.items():
+                for category, values in year_data.get("Exports", {}).items():
+                    optimized_values = optimized_trade_data.get("Exports", {}).get(category, [])
+                    if category not in error_term_data["Exports"]:
+                        error_term_data["Exports"][category] = {}
+                    error_term_data["Exports"][category][year] = calculate_error_terms(values, optimized_values)
+            
+            # Insert the city's name and calculated error terms into the error terms table
+            Cities_Error_Terms.insert_one({
+                "Name": city_name,
+                "Trade_Error_Terms": error_term_data
+            })
+            print(f"Processed city: {city_name}")
+        else:
+            print(f"No optimized data found for city: {city_name}")
 
-if "Cities_Opt_2" not in collist:
-    #Create collection if not already existing
-    Cities_Opt_2 = db["Cities_Opt_2"]
+# Method to each category to an array 
+def category_to_array(category):
+    #Find the difference between each value in array 
+    
 
-if "Cities_Opt_3" not in collist:
-    #Create collection if not already existing
-    Cities_Opt_3 = db["Cities_Opt_3"]
 
-if "Cities_Opt_4" not in collist:
-    #Create collection if not already existing
-    Cities_Opt_4 = db["Cities_Opt_4"]
-
-if "Cities_Opt_5" not in collist:
-    #Create collection if not already existing
-    Cities_Opt_5 = db["Cities_Opt_5"]
 
 # Ensure the Constraints collection exists and add constraints if they don't already exist
 if "Constraints" not in collist:
@@ -88,6 +121,8 @@ if "Constraints" not in collist:
 
 if "GPT_constraints" not in collist:
     GPT_constraints = db["GPT_constraints"]
+
+create_error_term_table()
 
 
 

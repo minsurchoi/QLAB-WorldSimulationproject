@@ -141,25 +141,25 @@ end
 
 #Runs the quadratic optimiser on database and inserts it into Cities_Opt_1
 
-#for doc in collection
-#    city_name = doc["Name"]
-#
-#    # Check if document already exists in the target collection
-#    existing_doc = Mongoc.find_one(target_collection_1, Dict("Name" => city_name))
-#    if !isnothing(existing_doc)
-#        println("Document for city $city_name already exists in the target collection. Skipping.")
-#        continue
-#    end
-#
-#    imports, exports = create_trade_dict(doc)
-#    #Prevents Scope Warning
-#    local_opt_imports, local_opt_exports = quad_opt(imports, exports)
-#
-#    new_doc = Dict("Name" => city_name, "Optimized_Trade" => Dict("Imports" => opt_imports, "Exports" => opt_exports))
-    
+for doc in collection
+    city_name = doc["Name"]
+
+    # Check if document already exists in the target collection
+    existing_doc = Mongoc.find_one(target_collection_1, Dict("Name" => city_name))
+    if !isnothing(existing_doc)
+        println("Document for city $city_name already exists in the target collection. Skipping.")
+        continue
+    end
+
+    imports, exports = create_trade_dict(doc)
+    #Prevents Scope Warning
+    local_opt_imports, local_opt_exports = quad_opt(imports, exports)
+
+    new_doc = Dict("Name" => city_name, "Optimized_Trade" => Dict("Imports" => opt_imports, "Exports" => opt_exports))
+   
     # Needs to be converted into BSON format to be compatible with the method
-#    Mongoc.insert_one(target_collection_1, Mongoc.BSON(new_doc))
-#end
+    Mongoc.insert_one(target_collection_1, Mongoc.BSON(new_doc))
+end
 
 print("Success")
 

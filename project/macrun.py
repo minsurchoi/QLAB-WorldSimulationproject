@@ -2,17 +2,15 @@ import pymongo
 import json
 import sys
 import certifi
+import os
 
 from pymongo import MongoClient, InsertOne
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
-client = pymongo.MongoClient(r"mongodb+srv://minsurchoi:Minsur2003@cluster0.fbawjgk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-app = Flask('QLAB', template_folder='templates')
-
-uri = "mongodb+srv://minsurchoi:Minsur2003@cluster0.fbawjgk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient('mongodb://localhost:27017/')
+app = Flask(__name__, template_folder ='templates')
 
 try:
     client.admin.command('ping')
@@ -25,24 +23,29 @@ def index():
     db = client["QLAB"]
     cities_collection = db["Cities"]
     cities = cities_collection.find().sort("Name", pymongo.ASCENDING)
-    latitude_array = []
-    longitude_array = []
-    names_array = []
-
+    
+    city_data = []
     for city_document in cities:
-        if "Name" in city_document:
-            name = city_document["Name"]
-            names_array.append(name)
-            
-            if "co-ordinates" in city_document:
-                latitude = city_document["co-ordinates"]["latitude"]
-                longitude = city_document["co-ordinates"]["longitude"]
-                longitude_array.append(longitude)
-                latitude_array.append(latitude)
-
-            
-            
-    return render_template('index.j2', len = len(latitude_array),latitude_array = latitude_array, longitude_array = longitude_array, names_array = names_array)
+        if "Name" in city_document and "co-ordinates" in city_document and "Trade" in city_document:
+            city_data.append({
+                "name": city_document["Name"],
+                "latitude": city_document["co-ordinates"]["latitude"],
+                "longitude": city_document["co-ordinates"]["longitude"],
+                "trade": city_document["Trade"]
+            })
+    
+    return render_template('index.j2', cities=city_data)
+    
+@app.route('/submit_suggestion', methods=['POST'])
+def submit_suggestion():
+    suggestion = request.get_data(as_text=True)  # Get the raw text suggestion
+    if suggestion:
+        db = client["QLAB"]
+        suggestions_collection = db["Suggestions"]
+        suggestions_collection.insert_one({"suggestion": suggestion})
+        return "Suggestion submitted successfully"
+    else:
+        return "No suggestion provided"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

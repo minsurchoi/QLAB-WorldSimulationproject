@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+ crossorigin=""/>
+ <style>
+ #map {
+   height: 1000px;
+ }
+ #suggestion-box {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: white;
+   padding: 10px;
+   z-index: 1000;
+   border: 2px solid black;
+   background-color: rgba(255, 255, 255, 0.8);
+ }
+ #suggestion-input {
+   width: 200px;
+   padding: 5px;
+   margin-bottom: 5px;
+ }
+ #submit-suggestion {
+   width: 100%;
+   padding: 5px;
+   background-color: #4CAF50;
+   color: white;
+ }
+ #year-control {
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   background: white;
+   padding: 10px;
+   z-index: 1000;
+   background-color: rgba(255, 255, 255, 0.8);
+   text-align: center;
+ }
+ #year-input {
+   width: 100px;
+   padding: 5px;
+   margin-right: 5px;
+ }
+ #current-year {
+   font-weight: bold;
+   margin-bottom: 5px;
+ }
+ </style>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+ <script src="../dist/leaflet-slider.js"></script>
+</head>
+<body>
+ <div id="map"></div>
+ <div id="suggestion-box">
+   <input type="text" id="suggestion-input" placeholder="Enter your suggestion">
+   <button id="submit-suggestion">Submit Suggestion</button>
+ </div>
+ <div id="year-control">
+   <div id="current-year">Current Year: 1900</div>
+   <input type="number" id="year-input" placeholder="Enter year" min="0">
+   <button id="submit-year">Set Year</button>
+ </div>
+ <script>
+ var currentYear = 1900;
+ var map = L.map('map', {
+   minZoom: 1
+ }).setView([30, 30], 2.5);
+ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxZoom: 19,
+   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+ }).addTo(map);
+
+ document.getElementById('submit-suggestion').addEventListener('click', function() {
+   var suggestion = document.getElementById('suggestion-input').value;
+   if (suggestion) {
+     fetch('/submit_suggestion', {
+       method: 'POST',
+       body: suggestion,
+     })
+     .then(response => response.text())
+     .then(data => {
+       alert(data);
+       document.getElementById('suggestion-input').value = '';
+     })
+   } else {
+     alert('Please enter a suggestion before submitting.');
+   }
+ });
+
+ function updateMarkers() {
+    map.eachLayer(function (layer) {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
+
+    {% for city in cities %}
+    var lat = {{ city.latitude }};
+    var lng = {{ city.longitude }};
+    var name = "{{ city.name }}";
+    var tradeData = {{ city.trade|tojson }};
+    
+    var popupContent = "<b>" + name + "</b><br>" +
+                       "Latitude: " + lat + "<br>" +
+                       "Longitude: " + lng + "<br>";
+
+    if (tradeData[currentYear]) {
+        popupContent += "<br><b>Trade Data for " + currentYear + ":</b><br>" +
+                        "Imports: " + JSON.stringify(tradeData[currentYear].Imports) + "<br>" +
+                        "Exports: " + JSON.stringify(tradeData[currentYear].Exports);
+    } else {
+        popupContent += "<br>No trade data available for " + currentYear;
+    }
+
+    var marker = L.marker([lat, lng]).addTo(map);
+    marker.bindPopup(popupContent);
+    {% endfor %}
+}
+
+
+ function updateYear(year) {
+   currentYear = year;
+   document.getElementById('current-year').textContent = 'Current Year: ' + currentYear;
+   updateMarkers();
+ }
+
+ document.getElementById('submit-year').addEventListener('click', function() {
+   var year = parseInt(document.getElementById('year-input').value);
+   if (year >= 0 && year <= 2024) {
+     updateYear(year);
+   } else {
+     alert('Please enter a valid year between 0 and 2024.');
+   }
+ });
+
+ updateYear(1900);
+ </script>
+</body>
+</html>
+
