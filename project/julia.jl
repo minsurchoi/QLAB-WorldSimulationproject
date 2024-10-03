@@ -111,7 +111,7 @@ function quad_opt(imports::Dict{String, Vector{Float64}}, exports::Dict{String, 
             throw(ArgumentError("The length of imports and exports vectors for category $category must be equal"))
         end
         
-        #Optimize imports and exports using the GLPK model
+        #Optimize imports and exports using the Ipopt model
         n = length(category_imports)
         model = Model(optimizer_with_attributes(Ipopt.Optimizer, "print_level" => 0))
         

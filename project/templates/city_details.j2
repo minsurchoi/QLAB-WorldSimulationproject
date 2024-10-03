@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ city.name }} Details</title>
+</head>
+<body>
+    <h1>{{ city.name }} Details</h1>
+    <p>Latitude: {{ city.latitude }}</p>
+    <p>Longitude: {{ city.longitude }}</p>
+    <h2>Trade Data</h2>
+    <pre>{{ city.trade|tojson }}</pre>
+</body>
+</html>

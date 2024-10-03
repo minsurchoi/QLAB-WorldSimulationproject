@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>{{ city.name }} Trade Data for {{ city.year }}</title>
+</head>
+<body>
+    <h1>{{ city.name }} - {% if city.is_randomised %}Randomised {% endif %}Trade Data for {{ city.year }}</h1>
+    <h2>Imports</h2>
+    <ul>
+    {% for item, value in city.trade.Imports.items() %}
+        <li>{{ item }}: {{ value }}</li>
+    {% endfor %}
+    </ul>
+    <h2>Exports</h2>
+    <ul>
+    {% for item, value in city.trade.Exports.items() %}
+        <li>{{ item }}: {{ value }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Map</a>
+</body>
+</html>
