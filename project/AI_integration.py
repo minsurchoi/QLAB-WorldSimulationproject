@@ -13,10 +13,10 @@ try:
 except Exception as e:
     print(e)
 
-YOUR_API_KEY = "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"
+YOUR_API_KEY = ""
 
 chatGPT_client = OpenAI(
-    api_key = "sk-proj-ZZjiW4jlVRQkMPai26ZLT3BlbkFJzxIRVIaR5g96gz57Xk3y"
+    api_key = ""
 )
 
 client = OpenAI(api_key=YOUR_API_KEY, base_url="https://api.perplexity.ai")
