@@ -108,9 +108,9 @@ function quad_opt(imports::Dict{String, Vector{Float64}}, exports::Dict{String, 
         @variable(model, adjusted_imports[1:n] >= 0)
         @variable(model, adjusted_exports[1:n] >= 0)
         
-         w1 = 0.2  # Weight for total imports equals total exports
-         w2 = 0.6   # Weight for average of every 10 imports
-         w3 = 0.2   # Weight for imports equals exports for each year
+         w1 = 0.3  # Weight for total imports equals total exports
+         w2 = 0.3   # Weight for average of every 10 imports
+         w3 = 0.4   # Weight for imports equals exports for each year
         
          
          # Objective function with soft constraints

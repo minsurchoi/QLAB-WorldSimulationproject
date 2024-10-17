@@ -158,7 +158,7 @@ for doc in collection
     new_doc = Dict("Name" => city_name, "Optimized_Trade" => Dict("Imports" => opt_imports, "Exports" => opt_exports))
    
     # Needs to be converted into BSON format to be compatible with the method
-    Mongoc.insert_one(target_collection_1, Mongoc.BSON(new_doc))
+    #Mongoc.insert_one(target_collection_1, Mongoc.BSON(new_doc))
 end
 
 print("Success")

@@ -9,8 +9,6 @@ from flask import Flask, render_template, request
 from bson import json_util
 from flask import Flask, render_template, request, send_file
 
-
-
 client = MongoClient('mongodb://localhost:27017/')
 app = Flask(__name__, template_folder ='templates')
 logging.basicConfig(level=logging.DEBUG)
@@ -96,6 +94,22 @@ def randomised_city_trade_details(city_name, year):
         return render_template('city_trade_details.j2', city=city_data)
     else:
         return "Randomised trade data not found", 404
+
+@app.route('/city/<city_name>/optimised/<int:year>')
+def optimised_city_trade_details(city_name, year):
+    db = client["QLAB"]
+    optimised_cities_collection = db["Restructured_Cities_Opt_1c"]
+    city = optimised_cities_collection.find_one({"Name": city_name})
+    if city and str(year) in city.get("Trade", {}):
+        city_data = {
+            "name": city["Name"],
+            "year": year,
+            "trade": city["Trade"][str(year)],
+            "is_optimised": True
+        }
+        return render_template('city_trade_details.j2', city=city_data)
+    else:
+        return "Optimised trade data not found", 404
     
 @app.route('/download_full_database')
 def download_full_database():

@@ -59,7 +59,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-    <script src="../dist/leaflet-slider.js"></script>
 </head>
 <body>
     <div id="map"></div>
@@ -101,11 +100,39 @@
     });
 
     function updateMarkers() {
-    map.eachLayer(function (layer) {
-        if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
+        map.eachLayer(function (layer) {
+            if (layer instanceof L.Marker) {
+                map.removeLayer(layer);
+            }
+        });
+
+        {% for city in cities %}
+        var lat = {{ city.latitude }};
+        var lng = {{ city.longitude }};
+        var name = "{{ city.name }}";
+        var tradeData = {{ city.trade|tojson }};
+        
+        var popupContent = "<b>" + name + "</b><br>" +
+                        "Latitude: " + lat + "<br>" +
+                        "Longitude: " + lng + "<br>";
+
+        if (tradeData[currentYear]) {
+            popupContent += "<br><a href='/city/" + name + "/" + currentYear + 
+                        "' target='_blank'>View Trade Data for " + currentYear + "</a>";
+        } else {
+            popupContent += "<br>No trade data available for " + currentYear;
         }
-    });
+
+        popupContent += "<br><a href='/city/" + name + "/randomised/" + currentYear + 
+                        "' target='_blank'>View Randomised Trade Data for " + currentYear + "</a>";
+        
+        popupContent += "<br><a href='/city/" + name + "/optimised/" + currentYear + 
+                        "' target='_blank'>View Optimised Trade Data for " + currentYear + "</a>";
+
+        var marker = L.marker([lat, lng]).addTo(map);
+        marker.bindPopup(popupContent);
+        {% endfor %}
+    }
 
     {% for city in cities %}
     var lat = {{ city.latitude }};
@@ -129,7 +156,7 @@
     var marker = L.marker([lat, lng]).addTo(map);
     marker.bindPopup(popupContent);
     {% endfor %}
-}
+
 
 
     function updateYear(year) {
